@@ -29,3 +29,8 @@ resource "null_resource" "copy_ec2_keys" {
   }
 
 }
+
+resource "aws_key_pair" "deployer" {
+  key_name   = "eks-terraform-key"
+  public_key = file("~/.ssh/id_rsa.pub") 
+}

@@ -1,4 +1,4 @@
-- Create S3 bucket `tfstate-willido` and dynamodb table `ekscluster-dev` for remote state
+- Create S3 bucket `tfstate-<your_name>` in versions.tf and dynamodb table `ekscluster-dev` for remote state
 
 ```
   backend "s3" {
@@ -133,4 +133,3 @@ k delete -f ./manifests
 k delete ns jr-tut
 cd ./terraform && terraform destroy -auto-approve
 ```
-
